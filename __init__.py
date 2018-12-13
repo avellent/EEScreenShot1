@@ -31,12 +31,12 @@ class TestSkill(MycroftSkill):
 
     def initialize(self):
         test_intent = IntentBuilder("TestIntent"). \
-            require("HelloWorldKeyword").build()
+            require("BasicSkillKeyword").build()
         self.register_intent(test_intent,
                              self.handle_test_intent)
 
     def handle_test_intent(self, message):
-        self.speak_dialog("hello.world")
+        self.speak_dialog("Basic.Skill")
 
     def stop(self):
         pass
